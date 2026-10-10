@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d5c55" />
+    <title>ÉtatCivil — Logpom/Andem</title>
+    <link rel="stylesheet" href="./styles.css?v=20261010-fix1" />
+  </head>
+  <body>
+    <svg class="svg-defs" aria-hidden="true">
+      <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+      <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h6"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+      <symbol id="i-chart" viewBox="0 0 24 24"><path d="M3 3v18h18M7 16v-5M12 16V7M17 16v-9"/></symbol>
+      <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.12 2.12-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.55V20.3h-3v-.09A1.7 1.7 0 0 0 10.68 18.7a1.7 1.7 0 0 0-1.88.34l-.06.06-2.12-2.12.06-.06A1.7 1.7 0 0 0 7.02 15a1.7 1.7 0 0 0-1.55-1.03H5.4v-3h.07A1.7 1.7 0 0 0 7.02 9.94 1.7 1.7 0 0 0 6.68 8.06L6.62 8 8.74 5.88l.06.06a1.7 1.7 0 0 0 1.88.34 1.7 1.7 0 0 0 1.03-1.55V4.7h3v.03a1.7 1.7 0 0 0 1.03 1.55 1.7 1.7 0 0 0 1.88-.34l.06-.06L19.8 8l-.06.06a1.7 1.7 0 0 0-.34 1.88 1.7 1.7 0 0 0 1.55 1.03h.07v3h-.07A1.7 1.7 0 0 0 19.4 15z"/></symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+      <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+      <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></symbol>
+    </svg>
+
+    <section class="login-screen" id="login-screen">
+      <div class="login-intro">
+        <div class="brand"><span class="brand-mark">E</span><span>État<span>Civil</span></span></div>
+        <div class="login-copy"><p class="eyebrow light">CENTRE D'ÉTAT CIVIL DE <span id="login-centre-name">LOGPOM/ANDEM</span></p><h1>La confiance publique,<br><em>au cœur du numérique.</em></h1><p>Gérez les actes, accompagnez les citoyens et assurez la traçabilité de chaque démarche depuis un espace unique et sécurisé.</p></div>
+        <div class="login-points"><span><svg><use href="#i-shield"/></svg>Accès protégé par rôle</span><span><svg><use href="#i-file"/></svg>Actes juridiquement traçables</span><span><svg><use href="#i-chart"/></svg>Pilotage en temps réel</span></div>
+        <div class="login-decoration"><i></i><i></i><i></i></div>
+      </div>
+      <div class="login-panel"><div class="login-box"><span class="login-kicker"><svg><use href="#i-lock"/></svg>ESPACE SÉCURISÉ</span><h1>Bienvenue</h1><p>Connectez-vous pour accéder à votre espace de travail.</p><form id="login-form"><label for="login-email">Adresse e-mail</label><input id="login-email" name="email" type="email" autocomplete="email" required/><label for="login-password">Mot de passe</label><div class="password-field"><input id="login-password" name="password" type="password" autocomplete="current-password" required/><button type="button" id="toggle-password" aria-label="Afficher le mot de passe">◉</button></div><p class="login-error hidden" id="login-error"></p><button class="primary-button login-submit" type="submit">Se connecter <svg><use href="#i-arrow"/></svg></button></form></div></div>
+    </section>
+
+    <div id="app" class="hidden">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand"><span class="brand-mark">E</span><span>État<span>Civil</span></span></div>
+        <div class="centre-switch"><span class="centre-dot"></span><div><small>Centre actif</small><strong id="centre-active-name">Centre d’état civil de Logpom/Andem</strong></div><svg><use href="#i-chevron"/></svg></div>
+        <p class="nav-label">ESPACE INTERNE</p>
+        <nav class="main-nav" aria-label="Navigation principale">
+          <button class="nav-item active" data-view="dashboard"><svg><use href="#i-grid"/></svg><span>Tableau de bord</span></button>
+          <button class="nav-item" data-view="registry"><svg><use href="#i-file"/></svg><span>Registre des actes</span></button>
+          <button class="nav-item" data-view="requests"><svg><use href="#i-users"/></svg><span>Demandes citoyennes</span><b id="request-badge">4</b></button>
+          <button class="nav-item" data-view="mentions"><svg><use href="#i-file"/></svg><span>Mentions marginales</span></button>
+          <button class="nav-item" data-view="statistics"><svg><use href="#i-chart"/></svg><span>Statistiques</span></button>
+          <button class="nav-item" data-view="admin"><svg><use href="#i-settings"/></svg><span>Administration</span></button>
+        </nav>
+        <div class="sidebar-bottom">
+          <button class="citizen-switch" id="citizen-switch"><span class="round-icon">↗</span><span>Voir le portail citoyen</span></button>
+          <div class="agent-card"><div class="avatar" id="agent-initials">AM</div><div><strong id="agent-name">Utilisateur</strong><small id="agent-role">Agente d'état civil</small></div><button id="logout-button" aria-label="Se déconnecter" title="Se déconnecter">↪</button></div>
+        </div>
+      </aside>
+
+      <main class="workspace">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" aria-label="Ouvrir le menu"><svg><use href="#i-menu"/></svg></button>
+          <div class="breadcrumb" id="breadcrumb">Espace interne <span>/</span> Tableau de bord</div>
+          <div class="topbar-actions"><span class="session-role" id="session-role">Agent</span><button class="icon-button notification" aria-label="Notifications"><svg><use href="#i-bell"/></svg><i></i></button><span class="today" id="today-label">Aujourd’hui</span></div>
+        </header>
+
+        <section class="view active" id="dashboard-view">
+          <div class="view-heading"><div><p class="eyebrow">CENTRE D'ÉTAT CIVIL DE <span id="login-centre-name">LOGPOM/ANDEM</span></p><h1>Bonjour, <span id="dashboard-greeting-name">Utilisateur</span> <span>👋</span></h1><p class="subtitle">Voici l'activité de votre centre aujourd'hui.</p></div><button class="primary-button" data-open-modal="act"><svg><use href="#i-plus"/></svg>Enregistrer un acte</button></div>
+          <div class="stat-grid">
+            <article class="stat-card teal"><div class="stat-icon"><svg><use href="#i-file"/></svg></div><div><p>Actes enregistrés</p><h2 id="stat-acts">0</h2><small>Nombre réel dans Supabase</small></div></article>
+            <article class="stat-card amber"><div class="stat-icon"><svg><use href="#i-calendar"/></svg></div><div><p>En attente de validation</p><h2 id="stat-waiting">0</h2><small>En attente de validation</small></div></article>
+            <article class="stat-card indigo"><div class="stat-icon"><svg><use href="#i-users"/></svg></div><div><p>Demandes citoyennes</p><h2 id="stat-requests">0</h2><small>Demandes du centre</small></div></article>
+            <article class="stat-card rose"><div class="stat-icon"><svg><use href="#i-shield"/></svg></div><div><p>Actes validés</p><h2 id="stat-validated">0</h2><small>Actes validés</small></div></article>
+          </div>
+          <div class="dashboard-grid">
+            <section class="panel activity-panel"><div class="panel-title"><div><h2>Activité des actes</h2><p>Les 6 derniers mois</p></div><select aria-label="Période"><option>Cette année</option><option>Ce trimestre</option></select></div><div class="legend"><span><i class="legend-dot teal-dot"></i>Naissances</span><span><i class="legend-dot amber-dot"></i>Mariages</span><span><i class="legend-dot red-dot"></i>Décès</span></div><div class="bar-chart" aria-label="Graphique des actes mensuels"><p id="chart-empty-state">Le graphique mensuel détaillé n’est pas encore activé dans cette version.</p></div></section>
+            <section class="panel urgent-panel"><div class="panel-title"><div><h2>À traiter en priorité</h2><p>Actions nécessitant votre attention</p></div><button class="text-button" data-go="requests">Voir tout <svg><use href="#i-arrow"/></svg></button></div><div id="urgent-list"></div></section>
+          </div>
+          <section class="panel recent-panel"><div class="panel-title"><div><h2>Derniers actes enregistrés</h2><p>Les dernières modifications dans le registre</p></div><button class="text-button" data-go="registry">Accéder au registre <svg><use href="#i-arrow"/></svg></button></div><div class="table-wrap"><table><thead><tr><th>TYPE D'ACTE</th><th>RÉFÉRENCE</th><th>PERSONNE CONCERNÉE</th><th>DATE</th><th>STATUT</th><th></th></tr></thead><tbody id="recent-acts"></tbody></table></div></section>
+        </section>
+
+        <section class="view" id="registry-view">
+          <div class="view-heading"><div><p class="eyebrow">GESTION DES ACTES</p><h1>Registre des actes</h1><p class="subtitle">Recherchez, consultez et gérez les actes d'état civil.</p></div><button class="primary-button" data-open-modal="act"><svg><use href="#i-plus"/></svg>Nouvel acte</button></div>
+          <section class="panel registry-panel"><div class="filter-row"><label class="search-field"><svg><use href="#i-search"/></svg><input id="registry-search" type="search" placeholder="Rechercher par nom, numéro ou lieu…" /></label><select id="registry-type"><option value="all">Tous les types</option><option value="Naissance">Naissances</option><option value="Mariage">Mariages</option><option value="Décès">Décès</option></select><select id="registry-status"><option value="all">Tous les statuts</option><option value="Validé">Validés</option><option value="En attente">En attente</option><option value="Brouillon">Brouillons</option></select><button class="outline-button" id="reset-registry">Réinitialiser</button></div><div class="table-wrap"><table class="registry-table"><thead><tr><th>RÉFÉRENCE</th><th>TYPE</th><th>PERSONNE CONCERNÉE</th><th>ÉVÉNEMENT</th><th>CENTRE</th><th>STATUT</th><th>ACTIONS</th></tr></thead><tbody id="registry-body"></tbody></table></div><div class="table-footer"><span id="registry-count">6 actes affichés</span><div class="pagination"><button disabled>‹</button><button class="page-active">1</button><button>2</button><button>3</button><button>›</button></div></div></section>
+        </section>
+
+        <section class="view" id="requests-view">
+          <div class="view-heading"><div><p class="eyebrow">PORTAIL CITOYEN</p><h1>Demandes citoyennes</h1><p class="subtitle">Suivez et traitez les demandes de copies et d'extraits.</p></div><button class="outline-button" id="export-requests"><svg><use href="#i-download"/></svg>Exporter la liste</button></div>
+          <div class="request-summary"><button class="summary-tile selected" data-request-filter="all"><span>Toutes les demandes</span><strong id="all-requests-number">24</strong></button><button class="summary-tile" data-request-filter="Reçue"><span>À instruire</span><strong id="received-number">4</strong></button><button class="summary-tile" data-request-filter="En traitement"><span>En traitement</span><strong>8</strong></button><button class="summary-tile" data-request-filter="Prête"><span>Prêtes à délivrer</span><strong>3</strong></button></div>
+          <section class="panel"><div class="filter-row simple"><label class="search-field"><svg><use href="#i-search"/></svg><input id="request-search" type="search" placeholder="Rechercher un demandeur ou une référence…" /></label><select id="request-type"><option value="all">Tous les documents</option><option value="Extrait de naissance">Extraits de naissance</option><option value="Copie intégrale">Copies intégrales</option><option value="Extrait de mariage">Extraits de mariage</option></select></div><div class="request-list" id="request-list"></div></section>
+        </section>
+
+        <section class="view" id="mentions-view">
+          <div class="view-heading"><div><p class="eyebrow">SUIVI JURIDIQUE</p><h1>Mentions marginales</h1><p class="subtitle">Ajoutez et consultez les modifications associées aux actes.</p></div><button class="primary-button" data-open-modal="mention"><svg><use href="#i-plus"/></svg>Ajouter une mention</button></div>
+          <section class="panel"><div class="mention-intro"><div class="mention-icon"><svg><use href="#i-shield"/></svg></div><div><h2>Historique juridiquement traçable</h2><p>Une mention est horodatée, attribuée à son auteur et ne peut pas être supprimée.</p></div></div><div class="table-wrap"><table><thead><tr><th>ACTE CONCERNÉ</th><th>TYPE DE MENTION</th><th>RÉFÉRENCE SOURCE</th><th>AJOUTÉE PAR</th><th>DATE</th><th></th></tr></thead><tbody id="mentions-body"></tbody></table></div></section>
+        </section>
+
+        <section class="view" id="statistics-view">
+          <div class="view-heading"><div><p class="eyebrow">PILOTAGE DU CENTRE</p><h1>Statistiques &amp; rapports</h1><p class="subtitle">Une vue claire des principaux indicateurs démographiques.</p></div><button class="outline-button" id="export-report"><svg><use href="#i-download"/></svg>Exporter le rapport</button></div>
+          <div class="report-toolbar"><select disabled aria-label="Période"><option>Toutes les dates</option></select><select disabled aria-label="Centre"><option>Centre d’état civil de Logpom/Andem</option></select></div><div class="stat-grid reports"><article class="metric-card"><span>Naissances enregistrées</span><strong id="report-birth-count">0</strong><small>Enregistrements réels</small></article><article class="metric-card"><span>Mariages célébrés</span><strong id="report-marriage-count">0</strong><small>Enregistrements réels</small></article><article class="metric-card"><span>Décès enregistrés</span><strong id="report-death-count">0</strong><small>Enregistrements réels</small></article><article class="metric-card"><span>Délai moyen de traitement</span><strong>—</strong><small>Indisponible sans historique complet</small></article></div>
+          <section class="panel"><div class="panel-title"><div><h2>Statistiques complémentaires</h2><p>Les graphiques détaillés seront disponibles après définition et validation des champs nécessaires.</p></div></div><p>Cette version affiche uniquement les totaux calculés à partir des dossiers réels du centre. Aucune répartition fictive n’est présentée.</p></section>
+        </section>
+
+        <section class="view" id="admin-view">
+          <div class="view-heading"><div><p class="eyebrow">SUPERVISION</p><h1>Administration</h1><p class="subtitle">Gérez les accès, les centres et le journal de traçabilité.</p></div><button class="primary-button" data-open-modal="user"><svg><use href="#i-plus"/></svg>Créer un compte</button></div><div class="admin-grid"><section class="panel admin-card"><div class="large-icon"><svg><use href="#i-users"/></svg></div><h2>Utilisateurs &amp; rôles</h2><p>Les comptes actifs seront affichés à partir des données Supabase.</p><button class="text-button">Gérer les utilisateurs <svg><use href="#i-arrow"/></svg></button></section><section class="panel admin-card"><div class="large-icon amber-bg"><svg><use href="#i-grid"/></svg></div><h2>Centres d'état civil</h2><p>Centre pilote : Logpom/Andem. Les autres centres pourront être ajoutés ensuite.</p><button class="text-button">Gérer les centres <svg><use href="#i-arrow"/></svg></button></section><section class="panel admin-card"><div class="large-icon purple-bg"><svg><use href="#i-shield"/></svg></div><h2>Journal d'audit</h2><p>Les actions réelles apparaîtront ici lorsque le journal sera alimenté.</p><button class="text-button">Consulter le journal <svg><use href="#i-arrow"/></svg></button></section></div><section class="panel audit-preview"><div class="panel-title"><div><h2>Dernières actions sensibles</h2><p>Journal d'audit inviolable</p></div><button class="text-button">Voir le journal <svg><use href="#i-arrow"/></svg></button></div><p class="empty-row">Les événements de traçabilité réels seront affichés après les premières opérations.</p></section>
+        </section>
+      </main>
+    </div>
+
+    <section id="citizen-portal" class="citizen-portal hidden">
+      <header class="public-header"><div class="brand"><span class="brand-mark">E</span><span>État<span>Civil</span></span></div><nav><a href="#citizen-services">Mes démarches</a><a href="#verification">Vérifier un document</a><button class="outline-button" id="back-office">Espace agent</button><button class="public-login">Se connecter</button></nav></header>
+      <main>
+        <section class="public-hero"><div><p class="eyebrow light">SERVICE PUBLIC NUMÉRIQUE</p><h1>Vos démarches d'état civil,<br><em>plus simplement.</em></h1><p>Demandez vos documents, suivez votre dossier et vérifiez l'authenticité de vos actes en toute sécurité.</p><div class="hero-actions"><button class="white-button" data-open-modal="request"><svg><use href="#i-plus"/></svg>Faire une demande</button><a href="#verification">Vérifier un document <svg><use href="#i-arrow"/></svg></a></div><div class="hero-reassurance"><span><svg><use href="#i-lock"/></svg>Données protégées</span><span><svg><use href="#i-check"/></svg>Document authentifiable</span></div></div><div class="hero-card"><div class="document-preview"><div class="document-top"><span class="mini-crest">◎</span><span>RÉPUBLIQUE DU CAMEROUN<br><b>PAIX — TRAVAIL — PATRIE</b></span></div><div class="doc-title">EXTRAIT D'ACTE<br>DE NAISSANCE</div><div class="doc-lines"><i></i><i></i><i></i><i></i></div><div class="doc-bottom"><div class="fake-qr">▦</div><small>Document vérifiable<br>N° EC-2026-000421</small></div></div><div class="secure-pill"><svg><use href="#i-shield"/></svg>Authentifié par QR code</div></div></section>
+        <section class="public-services" id="citizen-services"><div class="section-heading"><p class="eyebrow">MES DÉMARCHES</p><h2>Que souhaitez-vous faire ?</h2><p>Accédez rapidement aux services essentiels de votre centre d'état civil.</p></div><div class="service-grid"><button class="service-card" data-open-modal="request"><span class="service-icon teal-service"><svg><use href="#i-file"/></svg></span><h3>Demander un document</h3><p>Copie intégrale ou extrait d'un acte de naissance, mariage ou décès.</p><span>Commencer <svg><use href="#i-arrow"/></svg></span></button><button class="service-card" data-open-modal="request"><span class="service-icon amber-service"><svg><use href="#i-calendar"/></svg></span><h3>Pré-déclarer une naissance</h3><p>Préparez votre déclaration avant votre passage au centre.</p><span>Faire une pré-déclaration <svg><use href="#i-arrow"/></svg></span></button><a class="service-card" href="#verification"><span class="service-icon purple-service"><svg><use href="#i-shield"/></svg></span><h3>Vérifier un document</h3><p>Contrôlez l'authenticité d'un document officiel reçu.</p><span>Vérifier maintenant <svg><use href="#i-arrow"/></svg></span></a></div></section>
+        <section class="tracking-section"><div><p class="eyebrow">SUIVI DE DOSSIER</p><h2>Vous avez déjà une demande ?</h2><p>Saisissez votre référence pour connaître son état d'avancement.</p></div><form id="tracking-form"><label for="tracking-code">Référence de demande</label><div><input id="tracking-code" placeholder="Ex. DEM-2026-00128"/><button class="primary-button" type="submit">Suivre ma demande</button></div><small>Vous recevez cette référence par e-mail après le dépôt de votre demande.</small></form><div class="tracking-result hidden" id="tracking-result"></div></section>
+        <section class="verification" id="verification"><div class="verify-art"><div class="verify-icon"><svg><use href="#i-shield"/></svg></div><div class="verify-grid"></div></div><div><p class="eyebrow">VÉRIFICATION</p><h2>Vérifiez un document officiel</h2><p>Chaque document délivré possède un numéro unique et un QR code qui permettent de confirmer son authenticité.</p><form id="verify-form"><label for="verify-code">Numéro du document</label><div><input id="verify-code" placeholder="Ex. EC-2026-000421"/><button class="primary-button" type="submit">Vérifier</button></div></form><div class="verify-result hidden" id="verify-result"></div></div></section>
+      </main>
+      <footer><div class="brand"><span class="brand-mark">E</span><span>État<span>Civil</span></span></div><p>Service numérique du Centre d'État Civil de Logpom/Andem</p><span>© 2026 — Tous droits réservés</span></footer>
+    </section>
+
+    <div class="modal-layer hidden" id="modal-layer" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal"><button class="modal-close" id="modal-close" aria-label="Fermer"><svg><use href="#i-close"/></svg></button><div id="modal-content"></div></div></div>
+    <div class="toast hidden" id="toast"><svg><use href="#i-check"/></svg><span id="toast-message"></span></div>
+    <script src="./app.js?v=20261010-fix1"></script>
+  </body>
+</html>
